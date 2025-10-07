@@ -2,7 +2,18 @@ import{cart, removeFromCart} from'../data/cart.js';
 import{products} from'../data/products.js';
 import{formatCurrency} from'./utils/money.js';
 
+
+hello();
+
+dayjs();
+
+const today = dayjs();
+const deliveryDate = today.add(7, 'days');
+console.log(deliveryDate.formar('dddd, MMMM D'));
+
 let cartItemsHTML = '';
+
+
 
 
 cart.forEach((cartItem) => {
