@@ -14,8 +14,6 @@ console.log(deliveryDate.formar('dddd, MMMM D'));
 let cartItemsHTML = '';
 
 
-
-
 cart.forEach((cartItem) => {
     const productId = cartItem.productId;
 
@@ -110,7 +108,8 @@ cart.forEach((cartItem) => {
   `;
 });
 
-document.querySelector('.js-order-summary').innerHTML = cartSumarryHTML;
+document.querySelector('.js-order-summary')
+  .innerHTML = cartSumarryHTML;
 
 console.log(cartItemsHTML);
 
