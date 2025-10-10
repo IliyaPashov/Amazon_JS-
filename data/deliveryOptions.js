@@ -11,3 +11,16 @@ const deliveryOption = [{
     deliryDays: 1,
     priceCents: 999
 }];
+
+function getDeliveryOption(deliveryOptionId) {
+    let deliveryOptionId;
+
+    deliveryOptions.forEach((option) =>  {
+        if (option.id === deliveryOptionId) {
+            deliveryOption = option;
+        }
+    }); 
+    
+    return deliveryOption || deliveryOption[0];
+
+}
