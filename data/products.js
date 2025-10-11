@@ -6,8 +6,8 @@ export function getProduct(productId) {
       matchingProduct = product;
     }
   });
-  return matchingProduct;
 
+  return matchingProduct;
 }
 
 export const products = [
