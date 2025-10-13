@@ -19,13 +19,18 @@ if (formatCurrency(0) === '0.00') {
 console.log('rounging tests up to the nearest cent');
 if (formatCurrency(2000.5) === '20.01') {
   console.log('passed');
-}else {
+} else {
     console.log('failed');
-{-}
-}  if (formatCurrency(2000.4) === '20.0') {
+}
+    console.log ('verry good')
+  if (formatCurrency(2000.4) === '20.0') {
   console.log('passed');
 }else {
     console.log('failed');
 } 
 
-
+describe('test suite: Format curency', () => {
+    it('converting cents to dollars', () => {
+        expect(formatCurrency(2095)).toBe('20.95');
+    });
+});
