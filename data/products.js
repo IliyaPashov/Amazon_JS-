@@ -51,10 +51,9 @@ constructor(productDetails) {
 extraInfoHTML() {
   return `
     <a href="${this.sizeChartLink}"> Size chart  </a>>
-  `;
+   `;
+ }
 }
-}
-
 
 export const products = [
   {
