@@ -27,7 +27,7 @@ class product {
   }
 
   getStarsUrl() {
-    `images/ratings/rating-${this.rating.stars * 10}.png`;
+   return `images/ratings/rating-${this.rating.stars * 10}.png`;
   }
 
     getPrice() {
@@ -50,14 +50,14 @@ constructor(productDetails) {
 
 extraInfoHTML() {
   return `
-    <a href="${this.sizeChartLink}"> Size chart  </a>>
+    <a href="${this.sizeChartLink}"> Size chart  </a>
    `;
  }
 }
 
 export let products = [];
 
-function loadProducts() {
+ export function loadProducts(fun) {
   const xhr = new XMLHttpRequest();
 
   xhr.addEventListener('load', () => {
@@ -67,7 +67,8 @@ function loadProducts() {
   }
 return new product(productDetails);
 });
-console.log(products);
+console.log('load products');
+fun();
   });
   xhr.open('GET', 'https://supersimplebackend.dev/products');
   xhr.send();
