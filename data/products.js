@@ -92,6 +92,10 @@ return new product(productDetails);
 console.log('load products');
 
   });
+
+  xhr.addEventListener('error', () => {
+     console.log ('Unexpected error. Please try again later.'); 
+ });
   xhr.open('GET', 'https://supersimplebackend.dev/products');
   xhr.send();
 
